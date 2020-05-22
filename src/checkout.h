@@ -6,10 +6,16 @@
 #define SHOPPINGCART_CHECKOUT_H
 
 
+#include "pricingbook.h"
+
 class Checkout {
 public:
+    Checkout(PricingBook pricingBook);
     int total();
     void scan(char item);
+private:
+    PricingBook _pricingBook;
+    int _total;
 };
 
 
